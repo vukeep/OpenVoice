@@ -7,55 +7,58 @@
 
 </div>
 
-## Introduction
+## Введение
 
 ### OpenVoice V1
 
-As we detailed in our [paper](https://arxiv.org/abs/2312.01479) and [website](https://research.myshell.ai/open-voice), the advantages of OpenVoice are three-fold:
+Как мы подробно описали в наших [статье](https://arxiv.org/abs/2312.01479) и [сайте](https://research.myshell.ai/open-voice), преимущества OpenVoice заключаются в трех аспектах:
 
-**1. Accurate Tone Color Cloning.**
-OpenVoice can accurately clone the reference tone color and generate speech in multiple languages and accents.
+**1. Точное клонирование цвета тона**.
+OpenVoice может точно клонировать эталонный тональный цвет и генерировать речь на нескольких языках и акцентах.
 
-**2. Flexible Voice Style Control.**
-OpenVoice enables granular control over voice styles, such as emotion and accent, as well as other style parameters including rhythm, pauses, and intonation. 
+**2. Гибкое управление стилем голоса.**.
+OpenVoice позволяет детально контролировать стили голоса, такие как эмоции и акцент, а также другие параметры стиля, включая ритм, паузы и интонацию. 
 
-**3. Zero-shot Cross-lingual Voice Cloning.**
-Neither of the language of the generated speech nor the language of the reference speech needs to be presented in the massive-speaker multi-lingual training dataset.
+**3. Кросс-языковое клонирование голоса с нулевым результатом.**
+Ни язык генерируемой речи, ни язык эталонной речи не должны быть представлены в многоязычном обучающем наборе данных.
+
 
 ### OpenVoice V2
 
-In April 2024, we released OpenVoice V2, which includes all features in V1 and has:
+В апреле 2024 года мы выпустили OpenVoice V2, который включает в себя все функции V1 и имеет:
 
-**1. Better Audio Quality.**
-OpenVoice V2 adopts a different training strategy that delivers better audio quality.
+**1. Улучшенное качество звука.**
+OpenVoice V2 использует другую стратегию обучения, которая обеспечивает лучшее качество звука.
 
-**2. Native Multi-lingual Support.**
-English, Spanish, French, Chinese, Japanese and Korean are natively supported in OpenVoice V2.
+**2. Встроенная поддержка нескольких языков.**
+Английский, испанский, французский, китайский, японский и корейский языки поддерживаются в OpenVoice V2.
 
-**3. Free Commercial Use.**
-Starting from April 2024, both V2 and V1 are released under MIT License. Free for commercial use.
+**3. Бесплатное коммерческое использование.**
+Начиная с апреля 2024 года, V2 и V1 выпускаются под лицензией MIT. Бесплатно для коммерческого использования.
 
 [Video](https://github.com/myshell-ai/OpenVoice/assets/40556743/3cba936f-82bf-476c-9e52-09f0f417bb2f)
 
-OpenVoice has been powering the instant voice cloning capability of [myshell.ai](https://app.myshell.ai/explore) since May 2023. Until Nov 2023, the voice cloning model has been used tens of millions of times by users worldwide, and witnessed the explosive user growth on the platform.
+OpenVoice поддерживает возможность мгновенного клонирования голоса в [myshell.ai](https://app.myshell.ai/explore) с мая 2023 года. До ноября 2023 года модель клонирования голоса была использована десятки миллионов раз пользователями по всему миру и стала свидетелем взрывного роста пользователей на платформе.
 
-## Main Contributors
+
+
+## Основные соавторы
 
 - [Zengyi Qin](https://www.qinzy.tech) at MIT and MyShell
 - [Wenliang Zhao](https://wl-zhao.github.io) at Tsinghua University
 - [Xumin Yu](https://yuxumin.github.io) at Tsinghua University
 - [Ethan Sun](https://twitter.com/ethan_myshell) at MyShell
 
-## How to Use
-Please see [usage](docs/USAGE.md) for detailed instructions.
+## Как использовать
+Подробные инструкции см. в разделе [usage](docs/USAGE.md).
 
-## Common Issues
+## Общие вопросы
 
-Please see [QA](docs/QA.md) for common questions and answers. We will regularly update the question and answer list.
+Пожалуйста, смотрите [QA](docs/QA.md) для общих вопросов и ответов. Мы будем регулярно обновлять список вопросов и ответов.
 
-## Join Our Community
+## Присоединяйтесь к нашему сообществу
 
-Join our [Discord community](https://discord.gg/myshell) and select the `Developer` role upon joining to gain exclusive access to our developer-only channel! Don't miss out on valuable discussions and collaboration opportunities.
+Присоединяйтесь к нашему [Discord-сообществу](https://discord.gg/myshell) и выберите роль `Разработчик` при вступлении, чтобы получить эксклюзивный доступ к нашему каналу только для разработчиков! Не пропустите ценные обсуждения и возможности сотрудничества.
 
 ## Citation
 ```
@@ -67,8 +70,9 @@ Join our [Discord community](https://discord.gg/myshell) and select the `Develop
 }
 ```
 
-## License
-OpenVoice V1 and V2 are MIT Licensed. Free for both commercial and research use.
+## Лицензия
+OpenVoice V1 и V2 лицензированы MIT. Свободны как для коммерческого, так и для исследовательского использования.
 
-## Acknowledgements
-This implementation is based on several excellent projects, [TTS](https://github.com/coqui-ai/TTS), [VITS](https://github.com/jaywalnut310/vits), and [VITS2](https://github.com/daniilrobnikov/vits2). Thanks for their awesome work!
+## Благодарности
+Эта реализация основана на нескольких замечательных проектах, [TTS](https://github.com/coqui-ai/TTS), [VITS](https://github.com/jaywalnut310/vits) и [VITS2](https://github.com/daniilrobnikov/vits2). Спасибо за их замечательную работу!
+

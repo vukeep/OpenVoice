@@ -1,16 +1,17 @@
-# Usage
+# Использование
 
-## Table of Content
+## Оглавление
 
-- [Quick Use](#quick-use): directly use OpenVoice without installation.
-- [Linux Install](#linux-install): for researchers and developers only.
+- [Быстрое использование](#quick-use): прямое использование OpenVoice без установки.
+- [Linux Install](#linux-install): только для исследователей и разработчиков.
     - [V1](#openvoice-v1)
     - [V2](#openvoice-v2)
-- [Install on Other Platforms](#install-on-other-platforms): unofficial installation guide contributed by the community
+- [Установка на других платформах](#install-on-other-platforms): неофициальное руководство по установке, подготовленное сообществом.
 
-## Quick Use
+## Быстрое использование
 
-The input speech audio of OpenVoice can be in **Any Language**. OpenVoice can clone the voice in that speech audio, and use the voice to speak in multiple languages. For quick use, we recommend you to try the already deployed services:
+
+OpenVoice V2 может быть на **любом языке**. OpenVoice может клонировать голос в этом речевом аудио и использовать его для разговора на нескольких языках. Для быстрого использования мы рекомендуем вам попробовать уже развернутые сервисы:
 
 - [British English](https://app.myshell.ai/widget/vYjqae)
 - [American English](https://app.myshell.ai/widget/nEFFJf)
@@ -22,9 +23,9 @@ The input speech audio of OpenVoice can be in **Any Language**. OpenVoice can cl
 - [Japanese](https://app.myshell.ai/widget/IfIB3u)
 - [Korean](https://app.myshell.ai/widget/q6ZjIn)
 
-## Minimal Demo
+## Минимальная демонстрация
 
-For users who want to quickly try OpenVoice and do not require high quality or stability, click any of the following links:
+Для пользователей, которые хотят быстро попробовать OpenVoice и не требуют высокого качества или стабильности, нажмите на любую из следующих ссылок:
 
 <div align="center">
     <a href="https://app.myshell.ai/bot/z6Bvua/1702636181"><img src="../resources/myshell-hd.png" height="28"></a>
@@ -32,9 +33,9 @@ For users who want to quickly try OpenVoice and do not require high quality or s
     <a href="https://huggingface.co/spaces/myshell-ai/OpenVoice"><img src="../resources/huggingface.png" height="32"></a>
 </div>
 
-## Linux Install
+## Установка Linux
 
-This section is only for developers and researchers who are familiar with Linux, Python and PyTorch. Clone this repo, and run
+Этот раздел предназначен только для разработчиков и исследователей, знакомых с Linux, Python и PyTorch. Клонируйте это репо и запустите
 
 ```
 conda create -n openvoice python=3.9
@@ -44,40 +45,44 @@ cd OpenVoice
 pip install -e .
 ```
 
-No matter if you are using V1 or V2, the above installation is the same.
+Независимо от того, используете ли вы V1 или V2, вышеописанная установка будет одинаковой.
 
 ### OpenVoice V1
 
-Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/openvoice/checkpoints_1226.zip) and extract it to the `checkpoints` folder.
+Скачайте контрольную точку с [здесь](https://myshell-public-repo-hosting.s3.amazonaws.com/openvoice/checkpoints_1226.zip) и распакуйте ее в папку `checkpoints`.
 
-**1. Flexible Voice Style Control.**
-Please see [`demo_part1.ipynb`](../demo_part1.ipynb) for an example usage of how OpenVoice enables flexible style control over the cloned voice.
+**1. Гибкое управление стилями голоса.**.
+Пожалуйста, посмотрите [`demo_part1.ipynb`](../demo_part1.ipynb) для примера использования того, как OpenVoice позволяет гибко управлять стилем клонированного голоса.
 
-**2. Cross-Lingual Voice Cloning.**
-Please see [`demo_part2.ipynb`](../demo_part2.ipynb) for an example for languages seen or unseen in the MSML training set.
+**2. Кросс-языковое клонирование голоса**.
+Смотрите [`demo_part2.ipynb`](../demo_part2.ipynb) для примера использования языков, встречающихся и не встречающихся в обучающем наборе MSML.
 
-**3. Gradio Demo.**. We provide a minimalist local gradio demo here. We strongly suggest the users to look into `demo_part1.ipynb`, `demo_part2.ipynb` and the [QnA](QA.md) if they run into issues with the gradio demo. Launch a local gradio demo with `python -m openvoice_app --share`.
+**3. Демонстрация Gradio.**. Здесь мы предоставляем минималистичную локальную демонстрацию Gradio. Мы настоятельно рекомендуем пользователям изучить `demo_part1.ipynb`, `demo_part2.ipynb` и [QnA](QA.md), если у них возникнут проблемы с демонстрацией gradio. Запустите локальную демонстрацию gradio с помощью команды `python -m openvoice_app --share`.
+
 
 ### OpenVoice V2
 
-Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/openvoice/checkpoints_v2_0417.zip) and extract it to the `checkpoints_v2` folder.
+Скачайте контрольную точку с [здесь](https://myshell-public-repo-hosting.s3.amazonaws.com/openvoice/checkpoints_v2_0417.zip) и распакуйте ее в папку `checkpoints_v2`.
 
-Install [MeloTTS](https://github.com/myshell-ai/MeloTTS):
+Установите [MeloTTS](https://github.com/myshell-ai/MeloTTS):
 ```
 pip install git+https://github.com/myshell-ai/MeloTTS.git
 python -m unidic download
 ```
+для быстрого выполнения с powershell, используем строку:
+pip install git+https://github.com/myshell-ai/MeloTTS.git; if ($?) { python -m unidic download }
+```
 
-**Demo Usage.** Please see [`demo_part3.ipynb`](../demo_part3.ipynb) for example usage of OpenVoice V2. Now it natively supports English, Spanish, French, Chinese, Japanese and Korean.
+**Демонстрационное использование.** Пожалуйста, посмотрите [`demo_part3.ipynb`](../demo_part3.ipynb) для примера использования OpenVoice V2. Теперь он поддерживает английский, испанский, французский, китайский, японский и корейский языки.
 
 
-## Install on Other Platforms
+## Установка на других платформах
 
-This section provides the unofficial installation guides by open-source contributors in the community:
+В этом разделе представлены неофициальные руководства по установке, составленные участниками сообщества разработчиков открытого кода:
 
 - Windows
   - [Guide](https://github.com/Alienpups/OpenVoice/blob/main/docs/USAGE_WINDOWS.md) by [@Alienpups](https://github.com/Alienpups)
-  - You are welcome to contribute if you have a better installation guide. We will list you here.
+  - Вы можете внести свой вклад, если у вас есть лучшее руководство по установке. Мы включим вас в список здесь.
 - Docker
   - [Guide](https://github.com/StevenJSCF/OpenVoice/blob/update-docs/docs/DF_USAGE.md) by [@StevenJSCF](https://github.com/StevenJSCF)
-  - You are welcome to contribute if you have a better installation guide. We will list you here.
+  - Вы можете внести свой вклад, если у вас есть лучшее руководство по установке. Мы включим вас в список здесь.
